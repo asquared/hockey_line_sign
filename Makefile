@@ -47,6 +47,9 @@ TARGET = led_sign
 # List C source files here. (C dependencies are automatically generated.)
 SRC =	$(TARGET).c \
 	usb_serial.c \
+	display_io.c \
+	clock.c \
+	main_timer.c \
 
 
 # MCU name, you MUST set this to match the board you are using
@@ -149,6 +152,7 @@ CFLAGS += -ffunction-sections
 CFLAGS += -fpack-struct
 CFLAGS += -fshort-enums
 CFLAGS += -Wall
+CFLAGS += -Wextra
 CFLAGS += -Wstrict-prototypes
 #CFLAGS += -mshort-calls
 #CFLAGS += -fno-unit-at-a-time
