@@ -4,7 +4,8 @@
 #include "usb_serial.h"
 
 int main(void) {
-    CPU_PRESCALE(0);
+    CLKPR = 0x80;
+    CLKPR = 0x00;
 
     usb_init( );
 
